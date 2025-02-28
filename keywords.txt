@@ -1,6 +1,8 @@
-STEMVN_BLUETOOTH    KEYWORD1
+STEMVN_BLE    KEYWORD1
 begin              KEYWORD2
-read               KEYWORD2
-write              KEYWORD2
-_data              KEYWORD3
-_command           KEYWORD3
+update               KEYWORD2
+getJoystickX              KEYWORD2
+getJoystickY              KEYWORD2
+isButtonPressed              KEYWORD2
+getJoystickSide              KEYWORD2
+_processCommand              KEYWORD2

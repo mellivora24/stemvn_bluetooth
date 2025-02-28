@@ -1,0 +1,28 @@
+name: STEMVN_BLE Auto Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Generate ZIP for Arduino Library
+        run: |
+          mkdir -p release
+          cp -r src examples library.properties README.md release/
+          cd release
+          zip -r ../STEMVN_BLE.zip ./*
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: STEMVN_BLE.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
