@@ -1,4 +1,4 @@
-#include "stemvn_bluetooth.h"
+#include "STEMVN_BLE.h"
 
 STEMVN_BLE::STEMVN_BLE() {
   memset(_buttons, 0, sizeof(_buttons)); // Khởi tạo tất cả nút là false

@@ -1,5 +1,5 @@
-#ifndef stemvn_bluetooth_h
-#define stemvn_bluetooth_h
+#ifndef STEMVN_BLE
+#define STEMVN_BLE
 
 #include <Arduino.h>
 
